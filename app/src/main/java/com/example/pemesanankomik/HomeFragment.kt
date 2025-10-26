@@ -18,33 +18,26 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Menghubungkan layout fragment_home.xml ke kelas Kotlin ini
+
         return inflater.inflate(R.layout.fragment_home, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // 1. Cari RecyclerView dari layout
         rvKomik = view.findViewById(R.id.rv_komik)
 
-        // 2. Siapkan data komik (dummy)
         siapkanDataDummy()
 
-        // 3. Buat adapter
         komikAdapter = KomikAdapter(listKomik)
 
-        // 4. Atur RecyclerView
         rvKomik.layoutManager = LinearLayoutManager(context)
         rvKomik.adapter = komikAdapter
     }
 
     private fun siapkanDataDummy() {
-        // Hapus list lama jika ada
         listKomik.clear()
 
-        // Tambahkan data baru
-        // GANTI "R.drawable.nama_gambar_kamu" SESUAI NAMA FILE GAMBARMU
         listKomik.add(
             Komik(
                 1,
@@ -59,7 +52,7 @@ class HomeFragment : Fragment() {
                 2,
                 "Blue Lock",
                 "Seri manga dan anime bertema sepak bola tentang program pelatihan ekstrem yang dirancang untuk menciptakan striker terhebat di dunia. Setelah Jepang kalah di Piala Dunia, Federasi Sepak Bola Jepang meluncurkan proyek “Blue Lock” di mana 300 striker muda harus bersaing dalam tantangan brutal untuk menjadi yang terbaik; satu-satunya yang gagal akan dilarang selamanya bermain untuk tim nasional. ",
-                R.drawable.komik_bluelock // GANTI INI
+                R.drawable.komik_bluelock
             )
         )
 

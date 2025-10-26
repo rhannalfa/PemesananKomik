@@ -36,16 +36,12 @@ class OrderFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // 1. Dapatkan ViewModel yang sama dengan yang dipakai Adapter
         viewModel = ViewModelProvider(requireActivity()).get(CartViewModel::class.java)
 
-        // 2. "Amati" data keranjang
         viewModel.keranjang.observe(viewLifecycleOwner, Observer { daftarKomik ->
-            // 3. Update UI setiap kali data berubah
             if (daftarKomik.isNullOrEmpty()) {
                 tvDaftarPesanan.text = "Keranjang masih kosong"
             } else {
-                // Ubah list [Komik, Komik] menjadi "Judul 1\nJudul 2"
                 val daftarJudul = daftarKomik.map { it.judul }
                 tvDaftarPesanan.text = daftarJudul.joinToString("\n")
             }

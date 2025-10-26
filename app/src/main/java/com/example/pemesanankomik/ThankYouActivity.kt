@@ -14,15 +14,8 @@ class ThankYouActivity : AppCompatActivity() {
         val homeButton: Button = findViewById(R.id.btn_home)
 
         homeButton.setOnClickListener {
-            // Kembali ke Home
             val intent = Intent(this, HomeActivity::class.java)
-
-            // Flag ini penting:
-            // FLAG_ACTIVITY_CLEAR_TASK: Menghapus semua activity sebelumnya.
-            // FLAG_ACTIVITY_NEW_TASK: Memulai HomeActivity sebagai task baru.
-            // Ini memastikan pengguna tidak bisa menekan "Back" ke halaman ThankYou/Checkout
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-
             startActivity(intent)
         }
     }

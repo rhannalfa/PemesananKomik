@@ -14,18 +14,14 @@ class ProfileFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate layout-nya
         val view = inflater.inflate(R.layout.fragment_profile, container, false)
 
-        // Cari tombol Keluar di dalam view
         val logoutButton: Button = view.findViewById(R.id.btn_keluar)
 
         logoutButton.setOnClickListener {
-            // Kembali ke halaman Auth (pilihan login/register)
             val intent = Intent(activity, AuthActivity::class.java)
             startActivity(intent)
 
-            // Hapus HomeActivity dari tumpukan
             activity?.finish()
         }
 

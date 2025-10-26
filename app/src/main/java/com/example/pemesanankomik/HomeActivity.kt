@@ -12,17 +12,13 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-        // 1. Cari BottomNavigationView dari layout
         val bottomNavView: BottomNavigationView = findViewById(R.id.bottom_nav_view)
 
-        // 2. Cari "jendela" NavHostFragment
         val navHostFragment = supportFragmentManager
             .findFragmentById(R.id.nav_host_fragment) as NavHostFragment
 
-        // 3. Dapatkan NavController (pengatur navigasi)
         val navController = navHostFragment.navController
 
-        // 4. Sambungkan tombol navigasi dengan pengatur navigasi
         bottomNavView.setupWithNavController(navController)
     }
 }

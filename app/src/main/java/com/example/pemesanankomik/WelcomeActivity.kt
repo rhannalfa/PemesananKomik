@@ -15,7 +15,6 @@ class WelcomeActivity : AppCompatActivity() {
         val openNowButton: Button = findViewById(R.id.btn_open_now)
 
         openNowButton.setOnClickListener {
-            // Kita akan buat Activity ini (AuthActivity) di langkah berikutnya
             val intent = Intent(this, AuthActivity::class.java)
             startActivity(intent)
         }

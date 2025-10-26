@@ -43,19 +43,14 @@ class KomikAdapter(private val listKomik: List<Komik>) :
         holder.itemView.setOnClickListener {
             val context = holder.itemView.context
 
-            // Cek apakah 'context'-nya adalah Activity (yang bisa punya ViewModel)
             if (context is ComponentActivity) {
 
-                // 1. Dapatkan ViewModel yang di-host oleh Activity
                 val viewModel = ViewModelProvider(context).get(CartViewModel::class.java)
 
-                // 2. TAMBAHKAN komik ke ViewModel
                 viewModel.tambahKeKeranjang(komik)
 
-                // 3. Tampilkan pesan
                 Toast.makeText(context, "${komik.judul} ditambahkan", Toast.LENGTH_SHORT).show()
 
-                // 4. Pindah tab (jika context-nya HomeActivity)
                 if (context is HomeActivity) {
                     val bottomNavView: com.google.android.material.bottomnavigation.BottomNavigationView =
                         context.findViewById(R.id.bottom_nav_view)
