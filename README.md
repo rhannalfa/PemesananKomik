@@ -8,9 +8,9 @@ Aplikasi ini mendemonstrasikan navigasi dasar, manajemen *state* sederhana, dan 
 
 Berikut adalah alur utama dari aplikasi:
 
-1.  **Welcome & Autentikasi**: Pengguna disambut oleh `WelcomeActivity` dan diarahkan ke `AuthActivity` untuk memilih Login atau Register.
+1.  **Welcome & Autentikasi**: Pengguna disambut oleh `[WelcomeActivity](./assets/splash.jpg)` dan diarahkan ke `[AuthActivity](./assets/auth.jpg)` untuk memilih [Login](./assets/login.jpg) atau [Register](./assets/register.jpg).
 2.  **Home (Daftar Komik)**: Setelah login/register, pengguna masuk ke `HomeActivity`, yang menampilkan `HomeFragment`. Halaman ini berisi daftar komik yang dapat di-scroll.
-3.  **Tambah ke Keranjang**: Mengetuk item komik akan menambahkannya ke keranjang belanja (menggunakan `CartViewModel`) dan otomatis memindahkan pengguna ke tab Order.
+3.  **Tambah ke Keranjang**: Mengetuk item komik akan menambahkannya ke keranjang belanja (menggunakan `[CartViewModel](./assets/cart.jpg)`) dan otomatis memindahkan pengguna ke tab Order.
 4.  **Keranjang (Order)**: `OrderFragment` menampilkan daftar komik yang telah ditambahkan ke keranjang.
 5.  **Checkout & Selesai**: Pengguna dapat melanjutkan ke `CheckoutActivity` untuk mengisi alamat, dan diakhiri di `ThankYouActivity` setelah pesanan "diproses".
 6.  **Profil**: Tab profil (`ProfileFragment`) berisi informasi statis dan tombol untuk keluar (logout).
