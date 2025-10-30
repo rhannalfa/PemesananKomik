@@ -27,7 +27,7 @@ class HomeFragment : Fragment() {
 
         rvKomik = view.findViewById(R.id.rv_komik)
 
-        siapkanDataDummy()
+        siapkanDataDariResource()
 
         komikAdapter = KomikAdapter(listKomik)
 
@@ -35,34 +35,24 @@ class HomeFragment : Fragment() {
         rvKomik.adapter = komikAdapter
     }
 
-    private fun siapkanDataDummy() {
+    private fun siapkanDataDariResource() {
         listKomik.clear()
 
-        listKomik.add(
-            Komik(
-                1,
-                "One Piece",
-                "Serial manga dan anime Jepang yang menceritakan petualangan Monkey D. Luffy dan kru kapalnya, Bajak Laut Topi Jerami, dalam mencari harta karun legendaris \"One Piece\" untuk menjadi Raja Bajak Laut berikutnya",
-                R.drawable.komik_onepiece
-            )
-        )
+        val dataJudul = resources.getStringArray(R.array.data_komik_judul)
+        val dataDeskripsi = resources.getStringArray(R.array.data_komik_deskripsi)
+        val dataGambar = resources.obtainTypedArray(R.array.data_komik_gambar)
 
-        listKomik.add(
-            Komik(
-                2,
-                "Blue Lock",
-                "Seri manga dan anime bertema sepak bola tentang program pelatihan ekstrem yang dirancang untuk menciptakan striker terhebat di dunia. Setelah Jepang kalah di Piala Dunia, Federasi Sepak Bola Jepang meluncurkan proyek “Blue Lock” di mana 300 striker muda harus bersaing dalam tantangan brutal untuk menjadi yang terbaik; satu-satunya yang gagal akan dilarang selamanya bermain untuk tim nasional. ",
-                R.drawable.komik_bluelock
+        for (i in dataJudul.indices) {
+            val komik = Komik(
+                id = i,
+                judul = dataJudul[i],
+                deskripsi = dataDeskripsi[i],
+                gambarResId = dataGambar.getResourceId(i, -1)
             )
-        )
+            listKomik.add(komik)
+        }
 
-        listKomik.add(
-            Komik(
-                3,
-                "Kagurabachi",
-                "Seri manga shōnen Jepang yang ditulis dan diilustrasikan oleh Takeru Hokazono, yang bercerita tentang Chihiro Rokuhira dalam misinya untuk membalas dendam atas pembunuhan ayahnya. Cerita ini berpusat pada penggunaan pedang magis unik Enten oleh Chihiro dan upayanya untuk merebut kembali Enam Pedang Ajaib lainnya yang dicuri oleh para penyihir jahat.",
-                R.drawable.komik_kagurabachi
-            )
-        )
+        dataGambar.recycle()
     }
+
 }

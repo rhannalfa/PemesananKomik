@@ -1,5 +1,44 @@
 <resources>
     <string name="app_name">PemesananKomik</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="data_komik_judul">
+        <item>One Piece</item>
+        <item>Blue Lock</item>
+        <item>Kagurabachi</item>
+        <item>Dragon Ball</item>
+        <item>Inuyasha</item>
+        <item>Naruto</item>
+        <item>Fullmetal Alchemist</item>
+        <item>Death Note</item>
+        <item>Attack on Titan</item>
+        <item>Haikyuu!</item>
+    </string-array>
+
+    <string-array name="data_komik_deskripsi">
+        <item>Serial manga dan anime Jepang yang menceritakan petualangan Monkey D. Luffy dan kru kapalnya, Bajak Laut Topi Jerami, dalam mencari harta karun legendaris "One Piece" untuk menjadi Raja Bajak Laut berikutnya</item>
+        <item>Seri manga dan anime bertema sepak bola tentang program pelatihan ekstrem yang dirancang untuk menciptakan striker terhebat di dunia. Setelah Jepang kalah di Piala Dunia, Federasi Sepak Bola Jepang meluncurkan proyek “Blue Lock” di mana 300 striker muda harus bersaing dalam tantangan brutal untuk menjadi yang terbaik; satu-satunya yang gagal akan dilarang selamanya bermain untuk tim nasional. </item>
+        <item>Seri manga shōnen Jepang yang ditulis dan diilustrasikan oleh Takeru Hokazono, yang bercerita tentang Chihiro Rokuhira dalam misinya untuk membalas dendam atas pembunuhan ayahnya. Cerita ini berpusat pada penggunaan pedang magis unik Enten oleh Chihiro dan upayanya untuk merebut kembali Enam Pedang Ajaib lainnya yang dicuri oleh para penyihir jahat.</item>
+        <item>Dragon Ball adalah salah satu komik dan anime legendaris karya Akira Toriyama. Komiknya pertama kali rilis pada 3 Desember tahun 1984 lalu. Tak lama kemudian, pada 26 Februari 1986, animenya menyusul. Di Indonesia sendiri, Dragon Ball sempat menjadi anime paling populer di medio 90-an.</item>
+        <item>Ditulis oleh Rumiko Takahashi, Inuyasha merupakan komik dan anime yang menceritakan tentang Kagome, seorang remaja sekolah menengah atas yang terjatuh ke dalam sumur di kuil keluarganya sendiri. Setelah terjatuh, Kagome lalu menyadari bahwa dirinya berada di era Sengoku setelah bertemu dengan Inuyasha yang merupakan manusia setengah siluman.</item>
+        <item>Naruto merupakan komik anime Jepang paling populer berikutnya. Pertama kali dirilis pada 21 September 1999, komik Naruto berhasil menarik perhatian banyak orang dengan cerita dan karakter-karakternya.</item>
+        <item>Bercerita tentang Edward dan Alphonse, dua bersaudara yang berusaha mengembalikan tubuhnya setelah melakukan hal tabu dalam dunia alkemi: menghidupkan kembali ibunya yang telah meninggal dunia.</item>
+        <item>Death Note adalah anime yang kental dengan kematian, kejahatan, dan juga misteri. Death Note sendiri merupakan  buku catatan kematian milik Shinigami yang merupakan malaikat kematian di Jepang.</item>
+        <item>Berkisah tentang Eren Yeager, seorang laki-laki yang ingin membalas dendam kematian orang tuanya dengan membunuh semua titan yang ada di dunia. Untuk mewujudkan ambisinya, Eren bergabung dengan Survey Corps, pasukan pemburu Titan, bersama dengan dua orang sahabatnya, yaitu Mikasa dan Armin.</item>
+        <item>Haikyuu! merupakan komik anime dengan tema sport yang menceritakan perjalanan Shoyo Hinata mewujudkan mimpi untuk menjadi pemain voli profesional bersama klub bola voli SMA Karasuno.</item>
+    </string-array>
+
+    <array name="data_komik_gambar">
+        <item>@drawable/komik_onepiece</item>
+        <item>@drawable/komik_bluelock</item>
+        <item>@drawable/komik_kagurabachi</item>
+        <item>@drawable/komik_dragonball</item>
+        <item>@drawable/komik_inuyasha</item>
+        <item>@drawable/komik_naruto</item>
+        <item>@drawable/komik_fullmetal</item>
+        <item>@drawable/komik_deathnote</item>
+        <item>@drawable/komik_aot</item>
+        <item>@drawable/komik_haikyuu</item>
+    </array>
+
 </resources>
